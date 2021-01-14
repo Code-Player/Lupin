@@ -6,8 +6,7 @@
 
 #### 사용된 기술
 
-* [React](#react)
-
+- [React](#react)
 - [Typescript](#typescript)
 - [ESLint(Airbnb Style)](#eslint)
 - [Framer Motion](#framermotion)
