@@ -24,4 +24,3 @@ yarn-error.log*
 
 # etc
 .eslintcache
-.DS_Store
