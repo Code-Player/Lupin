@@ -1,4 +1,4 @@
-### [Study To-Do](https://github.com/Code-Player/Lupin)
+### Study To-Do
 
 * **React Hook**
   * [useState](https://ko.reactjs.org/docs/hooks-state.html)
