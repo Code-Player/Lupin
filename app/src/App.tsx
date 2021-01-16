@@ -10,6 +10,7 @@ import image4 from "./images/4.jpg";
 function App() {
   const [pageScrollY, setPageScrollY] = useState(0);
 
+  
   // 훅(HOOK) useState, useEffect, useCallback
   // 기존에 리액트 컴포넌트 => Class Component
   // const app = new ComponentA();
@@ -36,12 +37,28 @@ function App() {
   );
 
   return (
-    <div className="App" style={{ display: "grid", height: "1000px" }}>
+    <div className="App" style={{ display: "grid", height: "1000px", alignContent:"start" }}>
       <Nav pageScrollY={pageScrollY} />
-      <div style={{ display: "flex", height: "500px", justifyItems: "center" }}>
+      <div style={{ display: "flex", height: "500px", justifyItems: "center", overflow:"auto" }}>
         <Item itemName={"맥북프로 m1"} itemImage={image1} />
         <Item itemName={"아이패드 프로 4세대"} itemImage={image2} />
         <Item itemName={"아이맥 27인치"} itemImage={image3} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"아이폰12"} itemImage={image4} />
         <Item itemName={"아이폰12"} itemImage={image4} />
       </div>
     </div>
