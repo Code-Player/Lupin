@@ -11,6 +11,10 @@
 - [ESLint(Airbnb Style)](#eslint)
 - [Framer Motion](#framermotion)
 
+
+
+* [Study To-Do](https://github.com/Code-Player/Lupin/blob/master/Study-To-Do.md)
+
 -----
 
 ### [React](#react)
@@ -64,4 +68,3 @@
 
 1. 미려한 홈페이지를 만들기 위함
 2. WPF(C#)를 접할 때부터 애니메이션에 대해 관심이 많았고 실제로 프로젝트마다 애니메이션을 많이 삽입한 경험 있음
-
