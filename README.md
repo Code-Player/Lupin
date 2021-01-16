@@ -9,7 +9,7 @@
 - [React](#react)
 - [Typescript](#typescript)
 - [ESLint(Airbnb Style)](#eslint)
-- [Framer Motion](#framermotion)
+- [Framer Motion](#framer motion)
 
 
 
@@ -17,7 +17,7 @@
 
 -----
 
-### [React](#react)
+## [React](#사용된-기술)
 
 #### 사용 동기
 
@@ -34,7 +34,7 @@
 
 -----
 
-### [Typescript](#typescript)
+### [Typescript](#사용된-기술)
 
 #### 사용 동기
 
@@ -43,7 +43,7 @@
 
 -----
 
-### [ESLint](#eslint)
+### [ESLint](#사용된-기술)
 
 [참고 링크](https://velog.io/@_jouz_ryul/ESLint-Prettier-Airbnb-Style-Guide로-설정하기)
 
@@ -62,7 +62,7 @@
 
 -----
 
-### [Framer Motion](#framermotion)
+### [Framer Motion](#사용된-기술)
 
 #### 사용 동기
 
