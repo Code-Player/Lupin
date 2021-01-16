@@ -9,7 +9,7 @@
 - [React](#react)
 - [Typescript](#typescript)
 - [ESLint(Airbnb Style)](#eslint)
-- [Framer Motion](#framer motion)
+- [Framer Motion](#framer-motion)
 
 
 
