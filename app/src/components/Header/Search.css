@@ -1,0 +1,15 @@
+.search {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,10px);
+}
+
+.search-box{
+  animation-name: blur;
+}
+
+@keyframes blur {
+  to {
+    box-shadow: 0px 0px 10px #cfcfcf;
+  }
+}
