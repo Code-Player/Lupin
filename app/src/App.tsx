@@ -29,12 +29,9 @@ function App() {
     window.addEventListener("scroll", handlePageScroll);
   });
 
-  const handlePageScroll = useCallback(
-    (e: any) => {
-      setPageScrollY(window.scrollY);
-    },
-    [setPageScrollY]
-  );
+  const handlePageScroll = useCallback(() => {
+    setPageScrollY(window.scrollY);
+  }, [setPageScrollY]);
 
   return (
     <div
@@ -48,10 +45,12 @@ function App() {
       <Nav pageScrollY={pageScrollY} />
       <p>추천 상품</p>
       <div style={{ display: "flex", height: "500px" }}>
-        <Item itemName={"맥북프로 m1"} itemImage={image1} />
-        <Item itemName={"아이패드 프로 4세대"} itemImage={image2} />
-        <Item itemName={"아이맥 27인치"} itemImage={image3} />
-        <Item itemName={"아이폰12"} itemImage={image4} />
+        <Item itemName={"맥북프로 m1"} itemImage={image1} salePercentage={1}/>
+        <Item itemName={"아이패드 프로 4세대"} itemImage={image2} salePercentage={1} />
+        <Item itemName={"아이맥 27인치"} itemImage={image3} salePercentage={2} />
+        <Item itemName={"아이폰12"} itemImage={image4} salePercentage={13} />
+        <Item itemName={"아이폰12"} itemImage={image4} salePercentage={4} />
+        <Item itemName={"아이폰12"} itemImage={image4} salePercentage={500} />
       </div>
     </div>
   );
