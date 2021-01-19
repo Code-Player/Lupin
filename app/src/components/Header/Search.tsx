@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Search.css";
 
 interface Props {
@@ -6,10 +6,12 @@ interface Props {
 }
 
 function Search({ pageScrollY }: Props) {
-  const [shadow, setShadow] = useState("0px");
+  let suggest: string = "KF94 마스크";
 
-  let suggest: string =
-    "KF94 마스크";
+  const focus: any = useRef();
+
+  const [text, setText] = useState("");
+  const [shadow, setShadow] = useState("0px");
 
   function showNavigation(y: number) {
     if (y <= 50) {
@@ -19,48 +21,38 @@ function Search({ pageScrollY }: Props) {
     }
   }
 
-  // function shadow(focus: boolean) {
-  //   if (focus) {
-  //     return "0px 0px 3px gray";
-  //   } else {
-  //     return "0px";
-  //   }
-  // }
-
   return (
     <div style={{ position: "relative", height: "75px" }}>
       <div className={"search"}>
         <input
-        className={"search-box"}
+          className={"search-box"}
           placeholder={suggest}
           style={{
-            width: "600px",
-            height: "52px",
-            border: "solid 3px #3f84f2",
-            borderRadius: "5px",
-            fontWeight: "bold",
-            fontSize: "18px",
-            padding: "0px 15px",
-            outline: "none",
             boxShadow: shadow,
           }}
           onFocus={() => setShadow("0px 0px 10px #cfcfcf")}
           onBlur={() => setShadow("0px 0px 0px")}
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          spellCheck={false}
         />
       </div>
 
       <div
+        className={"navi-search-box"}
         style={{
-          position: "fixed",
-          boxShadow: "0px 0px 3px gray",
-          background: "white",
-          width: "100%",
-          height: "65px",
-          zIndex: 2,
           visibility: showNavigation(pageScrollY),
         }}
       >
-        <input placeholder={suggest} />
+        <input
+          className={"navSearch"}
+          autoFocus
+          placeholder={suggest}
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+          ref={focus}
+          spellCheck={false}
+        />
         {pageScrollY}
       </div>
     </div>
