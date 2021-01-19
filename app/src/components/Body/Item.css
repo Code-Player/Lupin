@@ -1,3 +1,30 @@
 p {
   font-family: sans-serif;
 }
+
+.itemTemplate {
+  background: white;
+  width: 200px;
+  height: 250px;
+  border-bottom: 10px;
+  box-shadow: 0px 0px 3px gray;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.badge {
+  position: absolute;
+  display: flexbox;
+  font-family: sans-serif;
+  color: white;
+  border-radius: 10px;
+  background: #ff3045;
+  font-size: 1rem;
+  padding: 3px 5px;
+  font-weight: bold;
+  margin: 10px -10px;
+  transform: translate(-100%, 0%);
+  flex-direction: column;
+  align-self: flex-end;
+}

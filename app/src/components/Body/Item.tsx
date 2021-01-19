@@ -1,45 +1,42 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Item.css";
-
-const mainStyle = {
-  background: "white",
-  width: "200px",
-  height: "230px",
-  borderRadius: "10px",
-  boxShadow: "0px 0px 3px gray",
-  margin: "10px",
-  overflow:"hidden"
-};
+import Badge from "./SaleBadge";
 
 interface Props {
   itemName: string;
   itemImage: string;
+  salePercentage: number;
 }
 
-function Item({ itemName, itemImage }: Props) {
+function Item({ itemName, itemImage, salePercentage }: Props) {
   const [count, setCount] = useState(0);
 
   return (
     <motion.div
-      style={mainStyle}
+      className={"itemTemplate"}
       whileHover={{
         scale: 1.1,
-        height: "270px",
+        height: "290px",
       }}
       whileTap={{ scale: 1 }}
       onClick={() => setCount(count + 1)}
     >
       <div style={{ margin: "10px" }}>
-        <img
-          src={itemImage}
+        <div
           style={{
-            width: "100%",
+            display: "flex",
             borderRadius: "10px",
-            alignItems: "center",
+            alignContent: "center",
           }}
-          alt={"dd"}
-        />
+        >
+          <img
+            src={itemImage}
+            style={{ width: "100%", height: "100%" }}
+            alt={itemName}
+          />
+          <Badge percent={salePercentage} />
+        </div>
         <p style={{ marginTop: "3px" }}>{itemName}</p>
         <p style={{ fontSize: "1.2em", color: "red" }}>{count}</p>
       </div>
